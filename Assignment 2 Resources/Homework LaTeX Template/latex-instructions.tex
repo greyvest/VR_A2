@@ -1,0 +1,67 @@
+\documentclass{article}
+\input{5963_6360-macros.tex}
+
+%================================================================
+% Document Header
+
+\title{CS 5963/6360 \LaTeX~Macros}
+\author{Rogelio E. Cardona-Rivera}
+\date{January 29, 2019}
+
+%================================================================
+% Document Body
+
+\begin{document}
+\maketitle
+
+In this class, when you are asked to typeset homework you may do
+so in \LaTeX.  Some of the macros come from standard packages, 
+and some from local definitions.  As the sources of this file 
+show, all the supplied packages and macro definitions can be 
+loaded by means of the \LaTeX command 
+\verb+\input{5963_6360-macros.tex}+. That file then loads others.
+
+You are \textbf{\textit{strongly}} encouraged to typeset your answers for 
+readability, but you need not typeset your answers in \LaTeX. 
+All answer submissions should include a PDF version of the 
+answers. You are encouraged to prepare your answers by simply 
+adding them into a copy of the homework source.  If you decide
+to do so, be sure to replace the name in the author environment:
+
+\begin{verbatim}
+\author{Rogelio E. Cardona-Rivera}
+\end{verbatim}
+
+\noindent Further, use the constructs \verb+\begin{answer}+ and 
+\verb+\end{answer}+ to begin and end your answer.  For example, 
+the code,
+
+\begin{verbatim}
+\begin{answer}
+I think, therefore I am.
+\end{answer}
+\end{verbatim}
+
+\noindent produces the result:\\[5pt]
+
+\begin{answer}
+I think, therefore I am.
+\end{answer}
+
+
+\section{Macros for symbols}
+
+\begin{center}
+  \begin{tabular}[h]{lll}
+    $\N$ & \verb+\N+ & Natural numbers \\
+    $\R$ & \verb+\R+ & Real numbers \\
+    $\Z$ & \verb+\Z+ & Integers \\
+  \end{tabular}
+\end{center}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

@@ -1,0 +1,38 @@
+% Package and macro definitions for CS 5963/6360: Virtual Reality.
+% Originally prepared August 23, 2012 by Jon Doyle
+
+%%% Page dimensions
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{9in}
+\setlength{\textwidth}{6.5in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\footskip}{0.5in}
+
+%%% Font and symbol definition packages
+\usepackage{helvet} 
+\usepackage{alltt}
+\usepackage{amsfonts, amsmath}
+\usepackage{amssymb}
+
+%%% The modified Sellinger fitch.sty file
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\def\land{\wedge}
+\def\lor{\vee}
+\def\implies{\rightarrow}
+\def\iff{\leftrightarrow}
+\def\turn{\vdash}
+\def\Cn{\text{Cn}}
+\def\Th{\text{Th}}
+\def\defeq{\stackrel{\rm def}{=}}
+
+%%% The environment for providing answers to problems
+\newenvironment{answer}%
+{\par\noindent\textbf{Answer}\par\noindent}%
+{}
