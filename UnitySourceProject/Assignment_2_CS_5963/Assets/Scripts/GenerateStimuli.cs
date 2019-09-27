@@ -16,7 +16,7 @@ public class GenerateStimuli : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        percievedScale = (Camera.main.fieldOfView * (Camera.main.transform.position - redsphere.transform.position).magnitude) / redsphere.transform.localScale.x;
+        
     }
 
     // Update is called once per frame
@@ -45,9 +45,18 @@ public class GenerateStimuli : MonoBehaviour
                 blSphere2.SetActive(true);
             }
         }
-        var distance = (Camera.main.transform.position - blSphere.transform.position).magnitude;
-        var size = distance * FixedSize * Camera.fieldOfView;
-        transform.localScale = Vector3.one * siz
-        var size = 
+
+        var redScale = redsphere.transform.localScale;
+        var redDistance = (Camera.main.transform.position - redsphere.transform.position).magnitude;
+        var redMatrix = redScale / redDistance;
+
+        var bl1distance = (Camera.main.transform.position - blSphere.transform.position).magnitude;
+        var one_size = redMatrix / bl1distance;
+        blSphere.transform.localScale = one_size;
+
+        var bl2distance = (Camera.main.transform.position - blSphere2.transform.position).magnitude;
+        var two_size = redDistance * redScale / bl2distance;
+        blSphere2.transform.localScale = two_size;
+        
     }
 }
