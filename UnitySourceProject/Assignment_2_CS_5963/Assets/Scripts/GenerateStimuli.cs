@@ -84,7 +84,7 @@ public class GenerateStimuli : MonoBehaviour
         float ratio1 = MidPoint1.magnitude / redDistance;
         */
         float rationMag1 = (Camera.main.transform.position - blSphere.transform.position).magnitude / redDistance;
-        blSphere.transform.localScale = redScale * rationMag1;
+        blSphere.transform.localScale = redScale * (rationMag1 + .5f/redDistance);
 
         /*THIS WAS AN ATTEMPT TO GET THE RATION FROM THE CENTER POINT ON THE VECTOR FROM CAMERA TO B2
         Vector3 B2 = (blSphere2.transform.position - Camera.main.transform.position);
@@ -104,7 +104,7 @@ public class GenerateStimuli : MonoBehaviour
         float ratio2 = MidPoint2.magnitude / redDistance;
         */
         float rationMag2 = (Camera.main.transform.position - blSphere2.transform.position).magnitude / redDistance;
-        blSphere2.transform.localScale = (redScale * rationMag2);
+        blSphere2.transform.localScale = (redScale * (rationMag2 + .5f/redDistance));
 
     }
 }
